@@ -6,8 +6,6 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.LinkedList;
-import java.util.List;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 public class LinkedlistVazifa {
@@ -22,19 +20,19 @@ public class LinkedlistVazifa {
 		getlinked(linked);
 		reversetartib(linked);
 //        clearlinked(linked);
-		System.out.println(" Ikkinchi topshiriq;");
+	System.out.println(" Ikkinchi topshiriq;");
 		addfirst(linked);
 		addlast(linked);
 		firstAndLast(linked);
-		System.out.println(" Uchinchi topshiriq");
+	System.out.println(" Uchinchi topshiriq");
 		removefirst(linked);
 		removeLast(linked);
-		System.out.println(" To'rtinchi topshiriq");
+	System.out.println(" To'rtinchi topshiriq");
 		LinkedList<String> linked2 = new LinkedList<String>(Arrays.asList("Ni hao", "Ola"));
 		birlashtiruvchi(linked, linked2);
 		copylinked(linked);
 		allwithoutfirst(linked);
-		System.out.println(" Beshinchi topshiriq");
+	System.out.println(" Beshinchi topshiriq");
 		aralashtiruvchi(linked);
 		ToArraylist(linked);
 		LinkedList<Integer> numbers = new LinkedList<Integer>(Arrays.asList(5, 33, 2, 11));
@@ -114,8 +112,10 @@ public class LinkedlistVazifa {
 	}
 
 	public static void sorting(LinkedList<String> aa) {
-		System.out.println(aa.stream().sorted(Comparator.comparingInt(String::length).reversed()).collect(Collectors.toCollection(LinkedList::new)));
+		System.out.println(aa.stream().sorted(Comparator.comparingInt(String::length).reversed())
+				.collect(Collectors.toCollection(LinkedList::new)));
 	}
+
 	public static void checkqiymat(LinkedList<String> abd, String ab) {
 		if (abd.contains(ab)) {
 			System.out.println("Ushbu qiymat ro'yhatda mavjud: " + ab);
