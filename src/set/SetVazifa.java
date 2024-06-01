@@ -9,8 +9,6 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
-import arraylist.Arraylist1;
-
 public class SetVazifa {
 
 	public static void main(String ar[]) {
@@ -45,13 +43,13 @@ public class SetVazifa {
 		System.out.println(" Beshinchi topshiriq");
 		NoInSecond(s1, s2);
 		NoInFirst(s1, s2);
-		Set<Integer> int1 = new HashSet<Integer>(Arrays.asList(1,2,3,5,0,2));
+		Set<Integer> int1 = new HashSet<Integer>(Arrays.asList(1, 2, 3, 5, 0, 2));
 		System.out.println(int1);
-		
-		Set<Integer> int2 = new HashSet<Integer>(Arrays.asList(87,21,32,58,4,29));
+
+		Set<Integer> int2 = new HashSet<Integer>(Arrays.asList(87, 21, 32, 58, 4, 29));
 		System.out.println(int1);
 		Juftelements(int1, int2);
-        		
+
 	}
 
 	public static void getall(Set<String> s1) {
@@ -86,26 +84,26 @@ public class SetVazifa {
 
 	public static void juftindex(List<String> aa) {
 		List<String> list = new ArrayList<String>();
-		
+
 		for (int i = 1; i < aa.size(); i++) {
 			if (i % 2 == 0) {
 				list.add(aa.get(i));
 			}
 		}
-		System.out.printf("Juft index: "+list);
+		System.out.printf("Juft index: " + list);
 	}
 
 	public static void equality(Set<String> s1, Set<String> s2) {
-			List<String> l1 = new ArrayList<String>();
-			Iterator<String> it1 = s1.iterator();
-			Iterator<String> it2 = s2.iterator();
-			while (it2.hasNext()) {
-				String st2 = it2.next();
-				if (s1.contains(st2)) {
-					l1.add(st2);
-				}
+		List<String> l1 = new ArrayList<String>();
+		Iterator<String> it1 = s1.iterator();
+		Iterator<String> it2 = s2.iterator();
+		while (it2.hasNext()) {
+			String st2 = it2.next();
+			if (s1.contains(st2)) {
+				l1.add(st2);
 			}
-		System.out.println("O'xshash qiymatlar: "+l1);
+		}
+		System.out.println("O'xshash qiymatlar: " + l1);
 	}
 
 	public static void dontcontain(Set<String> s1, Set<String> s2) {
@@ -157,17 +155,19 @@ public class SetVazifa {
 		}
 		System.out.println("Birinchi toplamda mavjud bo'lmagan ikkinchi to'plam elementlari: " + list);
 	}
-	public static void Juftelements (Set<Integer>s1, Set<Integer>s2) {
+
+	public static void Juftelements(Set<Integer> s1, Set<Integer> s2) {
 		List<Integer> list = new ArrayList<Integer>();
 		for (Integer int1 : s1) {
-			if(int1>0 && int1 % 2 ==0) {
+			if (int1 > 0 && int1 % 2 == 0) {
 				list.add(int1);
 			}
 		}
 		for (Integer int2 : s2) {
-			if(int2 > 0 && int2 % 2 ==0) {
+			if (int2 > 0 && int2 % 2 == 0) {
 				list.add(int2);
 			}
-		} System.out.println("Juft elementlar: "+list);
+		}
+		System.out.println("Juft elementlar: " + list);
 	}
 }
